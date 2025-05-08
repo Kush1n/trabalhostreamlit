@@ -25,7 +25,7 @@ traduzir = st.toggle("🔁Traduzir para Português", value=True)
 
 if st.button("🔎 Buscar informações"):
     url = f"https://api.api-ninjas.com/v1/planets?name={planeta}"
-    headers = {"X-Api-Key": st.secrets['API_KEY']}
+    headers = {"X-Api-Key": st.secrets['secrets']['API_KEY']}
     r = requests.get(url, headers=headers)
 
     if r.status_code == 200 and r.json():
