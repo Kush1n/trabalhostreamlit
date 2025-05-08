@@ -32,7 +32,7 @@ if st.button("🔎 Buscar informações"):
         dados = r.json()[0]
 
         def traduzir_texto(texto):
-            palavras = texto.split("_")  # quebra por underline
+            palavras = texto.split("_")
             palavras_traduzidas = [GoogleTranslator(source='en', target='pt').translate(p) for p in palavras]
             return " ".join(palavras_traduzidas)
 
